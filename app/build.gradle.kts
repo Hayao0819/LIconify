@@ -9,16 +9,16 @@ plugins {
 }
 
 android {
-    namespace = "com.drdisagree.iconify"
+    namespace = "com.hayao0819.liconify"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.drdisagree.iconify"
+        applicationId = "com.hayao0819.liconify"
         minSdk = 31
         targetSdk = 35
         versionCode = 24
         versionName = "7.2.0"
-        setProperty("archivesBaseName", "Iconify v${defaultConfig.versionName}")
+        setProperty("archivesBaseName", "LIconify v${defaultConfig.versionName}")
         buildConfigField("int", "MIN_SDK_VERSION", "$minSdk")
 
         ksp {
@@ -51,7 +51,7 @@ android {
             isCrunchPngs = false
             proguardFiles("proguard-android-optimize.txt", "proguard.pro", "proguard-rules.pro")
             applicationIdSuffix = ".debug"
-            resValue("string", "derived_app_name", "Iconify (Debug)")
+            resValue("string", "derived_app_name", "LIconify (Debug)")
             signingConfig = releaseSigning
         }
 
@@ -60,7 +60,7 @@ android {
             isShrinkResources = true
             isCrunchPngs = false
             proguardFiles("proguard-android-optimize.txt", "proguard.pro", "proguard-rules.pro")
-            resValue("string", "derived_app_name", "Iconify")
+            resValue("string", "derived_app_name", "LIconify")
             signingConfig = releaseSigning
         }
     }
@@ -71,13 +71,13 @@ android {
         create("standard") {
             isDefault = true
             dimension = "distribution"
-            resValue("string", "derived_app_name", "Iconify")
+            resValue("string", "derived_app_name", "LIconify")
         }
 
         create("foss") {
             dimension = "distribution"
             applicationIdSuffix = ".foss"
-            resValue("string", "derived_app_name", "Iconify (FOSS)")
+            resValue("string", "derived_app_name", "LIconify (FOSS)")
         }
     }
 
