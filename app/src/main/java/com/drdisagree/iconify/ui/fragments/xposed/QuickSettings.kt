@@ -13,6 +13,7 @@ import com.drdisagree.iconify.data.common.Preferences.HIDE_QS_SILENT_TEXT
 import com.drdisagree.iconify.data.common.Preferences.HIDE_STATUS_ICONS_SWITCH
 import com.drdisagree.iconify.data.common.Preferences.QSPANEL_HIDE_CARRIER
 import com.drdisagree.iconify.data.common.Preferences.SELECTED_QS_TEXT_COLOR
+import com.drdisagree.iconify.data.common.Preferences.HORIZONTAL_QSTILE_SWITCH
 import com.drdisagree.iconify.data.common.Preferences.VERTICAL_QSTILE_SWITCH
 import com.drdisagree.iconify.ui.activities.MainActivity
 import com.drdisagree.iconify.ui.base.ControlledPreferenceFragmentCompat
@@ -36,6 +37,7 @@ class QuickSettings : ControlledPreferenceFragmentCompat() {
 
         when (key) {
             VERTICAL_QSTILE_SWITCH,
+            HORIZONTAL_QSTILE_SWITCH,
             CUSTOM_QS_TEXT_COLOR,
             SELECTED_QS_TEXT_COLOR,
             HIDE_QSLABEL_SWITCH,
