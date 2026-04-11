@@ -1425,29 +1425,39 @@ class OpQsHeader(context: Context) : ModPack(context) {
     }
 
     private fun updateInternetTileColors() {
+        // Skip if colors not yet initialized (QSTileViewImpl not constructed yet)
+        if (colorActive == null || colorInactive == null) {
+            initResources()
+        }
+
         if (mInternetEnabled) {
             mOpQsHeaderView?.setInternetTileColor(
-                tileColor = colorActive,
-                labelColor = colorLabelActive
+                tileColor = colorActive ?: colorAccent,
+                labelColor = colorLabelActive ?: Color.WHITE
             )
         } else {
             mOpQsHeaderView?.setInternetTileColor(
-                tileColor = colorInactive,
-                labelColor = colorLabelInactive
+                tileColor = colorInactive ?: Color.TRANSPARENT,
+                labelColor = colorLabelInactive ?: Color.WHITE
             )
         }
     }
 
     private fun updateBluetoothTileColors() {
+        // Skip if colors not yet initialized (QSTileViewImpl not constructed yet)
+        if (colorActive == null || colorInactive == null) {
+            initResources()
+        }
+
         if (mBluetoothEnabled) {
             mOpQsHeaderView?.setBluetoothTileColor(
-                tileColor = colorActive,
-                labelColor = colorLabelActive
+                tileColor = colorActive ?: colorAccent,
+                labelColor = colorLabelActive ?: Color.WHITE
             )
         } else {
             mOpQsHeaderView?.setBluetoothTileColor(
-                tileColor = colorInactive,
-                labelColor = colorLabelInactive
+                tileColor = colorInactive ?: Color.TRANSPARENT,
+                labelColor = colorLabelInactive ?: Color.WHITE
             )
         }
     }
