@@ -2,7 +2,7 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <com.drdisagree.iconify.ui.preferences.BottomSheetListPreference
+    <com.hayao0819.liconify.ui.preferences.BottomSheetListPreference
         android:defaultValue="0"
         android:entries="@array/custom_battery_style"
         android:entryValues="@array/custom_battery_style_values"
@@ -11,7 +11,7 @@
         app:iconSpaceReserved="false"
         app:useSimpleSummaryProvider="true" />
 
-    <com.drdisagree.iconify.ui.preferences.SliderPreference
+    <com.hayao0819.liconify.ui.preferences.SliderPreference
         android:key="xposed_custombatterywidth"
         android:title="@string/battery_width_title"
         app:defaultValue="20"
@@ -22,7 +22,7 @@
         app:tickInterval="1"
         app:valueFormat="dp" />
 
-    <com.drdisagree.iconify.ui.preferences.SliderPreference
+    <com.hayao0819.liconify.ui.preferences.SliderPreference
         android:key="xposed_custombatteryheight"
         android:title="@string/battery_height_title"
         app:defaultValue="20"
@@ -33,61 +33,61 @@
         app:tickInterval="1"
         app:valueFormat="dp" />
 
-    <com.drdisagree.iconify.ui.preferences.SwitchPreference
+    <com.hayao0819.liconify.ui.preferences.SwitchPreference
         android:key="xposed_custombatteryhidepercentage"
         android:summary="@string/hide_percentage_desc"
         android:title="@string/hide_percentage_title"
         app:iconSpaceReserved="false" />
 
-    <com.drdisagree.iconify.ui.preferences.SwitchPreference
+    <com.hayao0819.liconify.ui.preferences.SwitchPreference
         android:key="xposed_custombatteryinsidepercentage"
         android:summary="@string/inside_percentage_desc"
         android:title="@string/inside_percentage_title"
         app:iconSpaceReserved="false" />
 
-    <com.drdisagree.iconify.ui.preferences.SwitchPreference
+    <com.hayao0819.liconify.ui.preferences.SwitchPreference
         android:key="xposed_custombatteryhidebattery"
         android:summary="@string/hide_battery_desc"
         android:title="@string/hide_battery_title"
         app:iconSpaceReserved="false" />
 
-    <com.drdisagree.iconify.ui.preferences.SwitchPreference
+    <com.hayao0819.liconify.ui.preferences.SwitchPreference
         android:key="xposed_custombatteryswappercentage"
         android:summary="@string/reverse_layout_desc"
         android:title="@string/reverse_layout_title"
         app:iconSpaceReserved="false" />
 
-    <com.drdisagree.iconify.ui.preferences.SwitchPreference
+    <com.hayao0819.liconify.ui.preferences.SwitchPreference
         android:key="xposed_custombatterylayoutreverse"
         android:summary="@string/rotate_layout_desc"
         android:title="@string/rotate_layout_title"
         app:iconSpaceReserved="false" />
 
-    <com.drdisagree.iconify.ui.preferences.SwitchPreference
+    <com.hayao0819.liconify.ui.preferences.SwitchPreference
         android:key="xposed_custombatteryperimeteralpha"
         android:summary="@string/perimeter_alpha_desc"
         android:title="@string/perimeter_alpha_title"
         app:iconSpaceReserved="false" />
 
-    <com.drdisagree.iconify.ui.preferences.SwitchPreference
+    <com.hayao0819.liconify.ui.preferences.SwitchPreference
         android:key="xposed_custombatteryfilledalpha"
         android:summary="@string/fill_alpha_desc"
         android:title="@string/fill_alpha_title"
         app:iconSpaceReserved="false" />
 
-    <com.drdisagree.iconify.ui.preferences.SwitchPreference
+    <com.hayao0819.liconify.ui.preferences.SwitchPreference
         android:key="xposed_custombatteryrainbowfillcolor"
         android:summary="@string/rainbow_color_desc"
         android:title="@string/rainbow_color_title"
         app:iconSpaceReserved="false" />
 
-    <com.drdisagree.iconify.ui.preferences.SwitchPreference
+    <com.hayao0819.liconify.ui.preferences.SwitchPreference
         android:key="xposed_custombatteryblendcolor"
         android:summary="@string/blend_color_desc"
         android:title="@string/blend_color_title"
         app:iconSpaceReserved="false" />
 
-    <com.drdisagree.iconify.ui.preferences.ColorPreference
+    <com.hayao0819.liconify.ui.preferences.ColorPreference
         android:defaultValue="0xff000000"
         android:dependency="xposed_custombatteryblendcolor"
         android:key="xposed_custombatteryfillcolor"
@@ -98,7 +98,7 @@
         app:cpv_showAlphaSlider="true"
         app:iconSpaceReserved="false" />
 
-    <com.drdisagree.iconify.ui.preferences.ColorPreference
+    <com.hayao0819.liconify.ui.preferences.ColorPreference
         android:defaultValue="0xff000000"
         android:dependency="xposed_custombatteryblendcolor"
         android:key="xposed_custombatteryfillgradcolor"
@@ -109,7 +109,7 @@
         app:cpv_showAlphaSlider="true"
         app:iconSpaceReserved="false" />
 
-    <com.drdisagree.iconify.ui.preferences.ColorPreference
+    <com.hayao0819.liconify.ui.preferences.ColorPreference
         android:defaultValue="0xff000000"
         android:dependency="xposed_custombatteryblendcolor"
         android:key="xposed_custombatterychargingcolor"
@@ -120,7 +120,7 @@
         app:cpv_showAlphaSlider="true"
         app:iconSpaceReserved="false" />
 
-    <com.drdisagree.iconify.ui.preferences.ColorPreference
+    <com.hayao0819.liconify.ui.preferences.ColorPreference
         android:defaultValue="0xff000000"
         android:dependency="xposed_custombatteryblendcolor"
         android:key="xposed_custombatterypowersavefillcolor"
@@ -131,7 +131,7 @@
         app:cpv_showAlphaSlider="true"
         app:iconSpaceReserved="false" />
 
-    <com.drdisagree.iconify.ui.preferences.ColorPreference
+    <com.hayao0819.liconify.ui.preferences.ColorPreference
         android:defaultValue="0xff000000"
         android:dependency="xposed_custombatteryblendcolor"
         android:key="xposed_custombatterypowersaveindicatorcolor"
@@ -142,13 +142,13 @@
         app:cpv_showAlphaSlider="true"
         app:iconSpaceReserved="false" />
 
-    <com.drdisagree.iconify.ui.preferences.SwitchPreference
+    <com.hayao0819.liconify.ui.preferences.SwitchPreference
         android:key="xposed_custombatterydimension"
         android:summary="@string/custom_margins_desc"
         android:title="@string/custom_margins_title"
         app:iconSpaceReserved="false" />
 
-    <com.drdisagree.iconify.ui.preferences.SliderPreference
+    <com.hayao0819.liconify.ui.preferences.SliderPreference
         android:dependency="xposed_custombatterydimension"
         android:key="xposed_custombatterymarginleft"
         android:title="@string/battery_margin_left_title"
@@ -160,7 +160,7 @@
         app:tickInterval="1"
         app:valueFormat="dp" />
 
-    <com.drdisagree.iconify.ui.preferences.SliderPreference
+    <com.hayao0819.liconify.ui.preferences.SliderPreference
         android:dependency="xposed_custombatterydimension"
         android:key="xposed_custombatterymarginright"
         android:title="@string/battery_margin_right_title"
@@ -172,7 +172,7 @@
         app:tickInterval="1"
         app:valueFormat="dp" />
 
-    <com.drdisagree.iconify.ui.preferences.SliderPreference
+    <com.hayao0819.liconify.ui.preferences.SliderPreference
         android:dependency="xposed_custombatterydimension"
         android:key="xposed_custombatterymargintop"
         android:title="@string/battery_margin_top_title"
@@ -184,7 +184,7 @@
         app:tickInterval="1"
         app:valueFormat="dp" />
 
-    <com.drdisagree.iconify.ui.preferences.SliderPreference
+    <com.hayao0819.liconify.ui.preferences.SliderPreference
         android:dependency="xposed_custombatterydimension"
         android:key="xposed_custombatterymarginbottom"
         android:title="@string/battery_margin_bottom_title"
@@ -196,13 +196,13 @@
         app:tickInterval="1"
         app:valueFormat="dp" />
 
-    <com.drdisagree.iconify.ui.preferences.SwitchPreference
+    <com.hayao0819.liconify.ui.preferences.SwitchPreference
         android:key="xposed_custombatterychargingiconswitch"
         android:summary="@string/custom_charging_icon_desc"
         android:title="@string/custom_charging_icon_title"
         app:iconSpaceReserved="false" />
 
-    <com.drdisagree.iconify.ui.preferences.BottomSheetListPreference
+    <com.hayao0819.liconify.ui.preferences.BottomSheetListPreference
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:defaultValue="0"
@@ -214,7 +214,7 @@
         app:iconSpaceReserved="false"
         app:useSimpleSummaryProvider="true" />
 
-    <com.drdisagree.iconify.ui.preferences.SliderPreference
+    <com.hayao0819.liconify.ui.preferences.SliderPreference
         android:dependency="xposed_custombatterychargingiconswitch"
         android:key="xposed_custombatterychargingiconmarginleft"
         android:title="@string/charging_icon_margin_left_title"
@@ -226,7 +226,7 @@
         app:tickInterval="1"
         app:valueFormat="dp" />
 
-    <com.drdisagree.iconify.ui.preferences.SliderPreference
+    <com.hayao0819.liconify.ui.preferences.SliderPreference
         android:dependency="xposed_custombatterychargingiconswitch"
         android:key="xposed_custombatterychargingiconmarginright"
         android:title="@string/charging_icon_margin_right_title"
@@ -238,7 +238,7 @@
         app:tickInterval="1"
         app:valueFormat="dp" />
 
-    <com.drdisagree.iconify.ui.preferences.SliderPreference
+    <com.hayao0819.liconify.ui.preferences.SliderPreference
         android:dependency="xposed_custombatterychargingiconswitch"
         android:key="xposed_custombatterychargingiconwidthheight"
         android:title="@string/charging_icon_size_title"

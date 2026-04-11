@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:search="http://schemas.android.com/apk/com.drdisagree.iconify.ui.preferences.preferencesearch">
+    xmlns:search="http://schemas.android.com/apk/com.hayao0819.liconify.ui.preferences.preferencesearch">
 
-    <com.drdisagree.iconify.ui.preferences.MasterSwitchPreference
+    <com.hayao0819.liconify.ui.preferences.MasterSwitchPreference
         android:key="xposed_headerimage"
         android:title="@string/activity_title_header_image" />
 
-    <com.drdisagree.iconify.ui.preferences.FilePickerPreference
+    <com.hayao0819.liconify.ui.preferences.FilePickerPreference
         android:dependency="xposed_headerimage"
         android:key="xposed_headerimagepicker"
         android:summary="@string/file_picker_desc"
@@ -16,7 +16,7 @@
         app:iconSpaceReserved="false"
         search:ignore="true" />
 
-    <com.drdisagree.iconify.ui.preferences.SliderPreference
+    <com.hayao0819.liconify.ui.preferences.SliderPreference
         android:dependency="xposed_headerimage"
         android:key="xposed_headerimageheight"
         android:title="@string/header_image_height_title"
@@ -27,7 +27,7 @@
         app:tickInterval="1"
         app:valueFormat="dp" />
 
-    <com.drdisagree.iconify.ui.preferences.SliderPreference
+    <com.hayao0819.liconify.ui.preferences.SliderPreference
         android:dependency="xposed_headerimage"
         android:key="xposed_headerimagealpha"
         android:title="@string/header_image_opacity"
@@ -38,7 +38,7 @@
         app:tickInterval="1"
         app:valueFormat="%" />
 
-    <com.drdisagree.iconify.ui.preferences.SliderPreference
+    <com.hayao0819.liconify.ui.preferences.SliderPreference
         android:dependency="xposed_headerimage"
         android:key="xposed_headerimagebottomfadeamount"
         android:title="@string/header_image_bottom_fade"
@@ -49,14 +49,14 @@
         app:tickInterval="1"
         app:valueFormat="dp" />
 
-    <com.drdisagree.iconify.ui.preferences.SwitchPreference
+    <com.hayao0819.liconify.ui.preferences.SwitchPreference
         android:dependency="xposed_headerimage"
         android:key="xposed_headerimagezoomtofit"
         android:summary="@string/header_image_zoom_to_fit_desc"
         android:title="@string/header_image_zoom_to_fit_title"
         app:iconSpaceReserved="false" />
 
-    <com.drdisagree.iconify.ui.preferences.SwitchPreference
+    <com.hayao0819.liconify.ui.preferences.SwitchPreference
         android:dependency="xposed_headerimage"
         android:key="xposed_headerimagelandscape"
         android:summary="@string/header_image_hide_in_landscape_desc"
@@ -64,7 +64,7 @@
         app:defaultValue="true"
         app:iconSpaceReserved="false" />
 
-    <com.drdisagree.iconify.ui.preferences.FooterPreference
+    <com.hayao0819.liconify.ui.preferences.FooterPreference
         android:key="header_image_footer_info"
         android:title="@string/hig_res_image_footer_info"
         search:ignore="true" />

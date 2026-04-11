@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:search="http://schemas.android.com/apk/com.drdisagree.iconify.ui.preferences.preferencesearch">
+    xmlns:search="http://schemas.android.com/apk/com.hayao0819.liconify.ui.preferences.preferencesearch">
 
-    <com.drdisagree.iconify.ui.preferences.MasterSwitchPreference
+    <com.hayao0819.liconify.ui.preferences.MasterSwitchPreference
         android:key="xposed_opqsheader"
         android:title="@string/oneplus_qs_header_title" />
 
-    <com.drdisagree.iconify.ui.preferences.SwitchPreference
+    <com.hayao0819.liconify.ui.preferences.SwitchPreference
         android:dependency="xposed_opqsheader"
         android:key="xposed_opqsheadervibrate"
         android:summary="@string/oneplus_qs_header_vibrate_desc"
         android:title="@string/oneplus_qs_header_vibrate_title"
         app:iconSpaceReserved="false" />
 
-    <com.drdisagree.iconify.ui.preferences.SwitchPreference
+    <com.hayao0819.liconify.ui.preferences.SwitchPreference
         android:defaultValue="true"
         android:dependency="xposed_opqsheader"
         android:key="xposed_opqsheadershowartwork"
@@ -22,7 +22,7 @@
         android:title="@string/oneplus_qs_header_show_artwork_title"
         app:iconSpaceReserved="false" />
 
-    <com.drdisagree.iconify.ui.preferences.SliderPreference
+    <com.hayao0819.liconify.ui.preferences.SliderPreference
         android:dependency="xposed_opqsheader"
         android:key="xposed_opqsheaderblurlevel"
         android:title="@string/oneplus_qs_header_blur_level"
@@ -34,7 +34,7 @@
         app:tickInterval="1"
         app:valueFormat="%" />
 
-    <com.drdisagree.iconify.ui.preferences.SliderPreference
+    <com.hayao0819.liconify.ui.preferences.SliderPreference
         android:dependency="xposed_opqsheader"
         android:key="xposed_opqsheadertopmargin"
         android:title="@string/oneplus_qs_header_top_margin"
@@ -46,7 +46,7 @@
         app:tickInterval="1"
         app:valueFormat="dp" />
 
-    <com.drdisagree.iconify.ui.preferences.SliderPreference
+    <com.hayao0819.liconify.ui.preferences.SliderPreference
         android:dependency="xposed_opqsheader"
         android:key="xposed_opqsheaderexpansiony"
         android:title="@string/oneplus_qs_header_expansion_y"
@@ -58,7 +58,7 @@
         app:tickInterval="1"
         app:valueFormat="dp" />
 
-    <com.drdisagree.iconify.ui.preferences.SliderPreference
+    <com.hayao0819.liconify.ui.preferences.SliderPreference
         android:dependency="xposed_opqsheader"
         android:key="xposed_opqsheadergapexpanded"
         android:title="@string/oneplus_qs_header_gap"
@@ -70,7 +70,7 @@
         app:tickInterval="1"
         app:valueFormat="dp" />
 
-    <com.drdisagree.iconify.ui.preferences.FooterPreference
+    <com.hayao0819.liconify.ui.preferences.FooterPreference
         android:key="op_qs_footer_info"
         android:title="@string/custom_tiles_footer_info"
         search:ignore="true" />

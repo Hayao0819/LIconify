@@ -21,21 +21,21 @@
             android:animateLayoutChanges="true"
             android:orientation="vertical">
 
-            <com.drdisagree.iconify.ui.widgets.SwitchWidget
+            <com.hayao0819.liconify.ui.widgets.SwitchWidget
                 android:id="@+id/header_image_overlap"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:summaryText="@string/overlap_header_image_desc"
                 app:titleText="@string/overlap_header_image_title" />
 
-            <com.drdisagree.iconify.ui.widgets.SwitchWidget
+            <com.hayao0819.liconify.ui.widgets.SwitchWidget
                 android:id="@+id/hide_data_disabled_icon"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:summaryText="@string/hide_data_disabled_icon_desc"
                 app:titleText="@string/hide_data_disabled_icon_title" />
 
-            <com.drdisagree.iconify.ui.widgets.MenuWidget
+            <com.hayao0819.liconify.ui.widgets.MenuWidget
                 android:id="@+id/send_notification"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

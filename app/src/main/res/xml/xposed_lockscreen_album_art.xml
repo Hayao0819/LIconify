@@ -2,11 +2,11 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <com.drdisagree.iconify.ui.preferences.MasterSwitchPreference
+    <com.hayao0819.liconify.ui.preferences.MasterSwitchPreference
         android:key="xposed_albumartonlockscreen"
         android:title="@string/media_art_title" />
 
-    <com.drdisagree.iconify.ui.preferences.ListPreference
+    <com.hayao0819.liconify.ui.preferences.ListPreference
         android:defaultValue="0"
         android:dependency="xposed_albumartonlockscreen"
         android:entries="@array/lockscreen_albumart_filter_entries"
@@ -16,7 +16,7 @@
         app:iconSpaceReserved="false"
         app:useSimpleSummaryProvider="true" />
 
-    <com.drdisagree.iconify.ui.preferences.SliderPreference
+    <com.hayao0819.liconify.ui.preferences.SliderPreference
         android:dependency="xposed_albumartonlockscreen"
         android:key="xposed_albumartonlockscreenblur"
         android:title="@string/media_art_blur_level_title"

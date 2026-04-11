@@ -7,7 +7,7 @@
     <item
         android:id="@android:id/progress"
         android:gravity="fill_horizontal|center">
-        <com.drdisagree.iconify.ui.views.RoundedCornerProgressDrawable
+        <com.hayao0819.liconify.ui.views.RoundedCornerProgressDrawable
             android:drawable="@drawable/seekbar_progress"
             android:gravity="fill_horizontal|center" />
     </item>

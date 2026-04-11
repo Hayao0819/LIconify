@@ -21,12 +21,12 @@
             android:animateLayoutChanges="true"
             android:orientation="vertical">
 
-            <com.drdisagree.iconify.ui.widgets.TitleWidget
+            <com.hayao0819.liconify.ui.widgets.TitleWidget
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:titleText="@string/section_title_portrait" />
 
-            <com.drdisagree.iconify.ui.widgets.SliderWidget
+            <com.hayao0819.liconify.ui.widgets.SliderWidget
                 android:id="@+id/port_nonexpanded_height"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -38,7 +38,7 @@
                 app:titleText="@string/qs_tile_non_expanded_height"
                 app:valueFormat="dp" />
 
-            <com.drdisagree.iconify.ui.widgets.SliderWidget
+            <com.hayao0819.liconify.ui.widgets.SliderWidget
                 android:id="@+id/port_expanded_height"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -50,12 +50,12 @@
                 app:titleText="@string/qs_tile_expanded_height"
                 app:valueFormat="dp" />
 
-            <com.drdisagree.iconify.ui.widgets.TitleWidget
+            <com.hayao0819.liconify.ui.widgets.TitleWidget
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:titleText="@string/section_title_landscape" />
 
-            <com.drdisagree.iconify.ui.widgets.SliderWidget
+            <com.hayao0819.liconify.ui.widgets.SliderWidget
                 android:id="@+id/land_nonexpanded_height"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -67,7 +67,7 @@
                 app:titleText="@string/qs_tile_non_expanded_height"
                 app:valueFormat="dp" />
 
-            <com.drdisagree.iconify.ui.widgets.SliderWidget
+            <com.hayao0819.liconify.ui.widgets.SliderWidget
                 android:id="@+id/land_expanded_height"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

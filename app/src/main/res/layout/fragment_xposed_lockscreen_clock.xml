@@ -7,7 +7,7 @@
     android:clipChildren="false"
     tools:context=".ui.fragments.xposed.LockscreenClockParent">
 
-    <com.drdisagree.iconify.ui.widgets.HorizontalTouchMovementAwareNestedScrollView
+    <com.hayao0819.liconify.ui.widgets.HorizontalTouchMovementAwareNestedScrollView
         android:id="@+id/scroll_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -22,7 +22,7 @@
             android:animateLayoutChanges="true"
             android:orientation="vertical">
 
-            <com.drdisagree.iconify.ui.widgets.MasterSwitchWidget
+            <com.hayao0819.liconify.ui.widgets.MasterSwitchWidget
                 android:id="@+id/ls_clock_switch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content" />
 
         </LinearLayout>
-    </com.drdisagree.iconify.ui.widgets.HorizontalTouchMovementAwareNestedScrollView>
+    </com.hayao0819.liconify.ui.widgets.HorizontalTouchMovementAwareNestedScrollView>
 
     <include
         android:id="@+id/header"

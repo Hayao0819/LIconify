@@ -7,7 +7,7 @@
     tools:orientation="vertical"
     tools:parentTag="LinearLayout">
 
-    <com.drdisagree.iconify.ui.widgets.SwitchWidget
+    <com.hayao0819.liconify.ui.widgets.SwitchWidget
         android:id="@+id/enable_charging_icon"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,7 +21,7 @@
         android:orientation="vertical"
         android:visibility="gone">
 
-        <com.drdisagree.iconify.ui.widgets.BottomSheetWidget
+        <com.hayao0819.liconify.ui.widgets.BottomSheetWidget
             android:id="@+id/charging_icon_style"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -29,7 +29,7 @@
             app:showSelectedPrefix="true"
             app:titleText="@string/charging_icon_style_title" />
 
-        <com.drdisagree.iconify.ui.widgets.SliderWidget
+        <com.hayao0819.liconify.ui.widgets.SliderWidget
             android:id="@+id/charging_icon_margin_left"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -40,7 +40,7 @@
             app:titleText="@string/charging_icon_margin_left_title"
             app:valueFormat="dp" />
 
-        <com.drdisagree.iconify.ui.widgets.SliderWidget
+        <com.hayao0819.liconify.ui.widgets.SliderWidget
             android:id="@+id/charging_icon_margin_right"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -51,7 +51,7 @@
             app:titleText="@string/charging_icon_margin_right_title"
             app:valueFormat="dp" />
 
-        <com.drdisagree.iconify.ui.widgets.SliderWidget
+        <com.hayao0819.liconify.ui.widgets.SliderWidget
             android:id="@+id/charging_icon_size"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

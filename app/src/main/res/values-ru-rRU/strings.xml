@@ -40,7 +40,7 @@
     <string name="searchpreference_clear_history">Очистить историю</string>
     <string name="searchpreference_no_result">Ничего не найденo</string>
     <!-- Home -->
-    <string name="activity_title_home_page">Iconify</string>
+    <string name="activity_title_home_page">LIconify</string>
     <string name="activity_title_icon_pack">Набор иконок</string>
     <string name="activity_desc_icon_pack">Изменить набор иконок системы</string>
     <string name="activity_title_cellular_icons">Иконка сети</string>

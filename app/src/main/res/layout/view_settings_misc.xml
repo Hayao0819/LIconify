@@ -6,14 +6,14 @@
     android:animateLayoutChanges="true"
     android:orientation="vertical">
 
-    <com.drdisagree.iconify.ui.widgets.TitleWidget
+    <com.hayao0819.liconify.ui.widgets.TitleWidget
         android:id="@+id/settings_misc_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:iconSpaceReserved="true"
         app:titleText="@string/settings_section_title_miscellaneous" />
 
-    <com.drdisagree.iconify.ui.widgets.SwitchWidget
+    <com.hayao0819.liconify.ui.widgets.SwitchWidget
         android:id="@+id/restart_sysui_after_boot"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,7 +21,7 @@
         app:summaryText="@string/settings_restart_systemui_after_boot_desc"
         app:titleText="@string/settings_restart_systemui_after_boot_title" />
 
-    <com.drdisagree.iconify.ui.widgets.SwitchWidget
+    <com.hayao0819.liconify.ui.widgets.SwitchWidget
         android:id="@+id/home_page_card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -29,7 +29,7 @@
         app:summaryText="@string/settings_show_home_page_card_desc"
         app:titleText="@string/settings_show_home_page_card_title" />
 
-    <com.drdisagree.iconify.ui.widgets.MenuWidget
+    <com.hayao0819.liconify.ui.widgets.MenuWidget
         android:id="@+id/clear_cache"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -37,7 +37,7 @@
         app:summaryText="@string/settings_clear_app_cache_desc"
         app:titleText="@string/settings_clear_app_cache_title" />
 
-    <com.drdisagree.iconify.ui.widgets.MenuWidget
+    <com.hayao0819.liconify.ui.widgets.MenuWidget
         android:id="@+id/experimental_features"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -46,7 +46,7 @@
         app:summaryText="@string/activity_desc_experimental"
         app:titleText="@string/experimental_features_title" />
 
-    <com.drdisagree.iconify.ui.widgets.MenuWidget
+    <com.hayao0819.liconify.ui.widgets.MenuWidget
         android:id="@+id/button_disableEverything"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

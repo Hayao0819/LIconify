@@ -34,7 +34,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- Get Location for Weather -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- Get Location for Weather -->
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" /> <!-- Get Location for Weather -->
-    <uses-permission android:name="com.drdisagree.iconify.READ_WEATHER" /> <!-- Permission for self Weather Provider -->
+    <uses-permission android:name="com.hayao0819.liconify.READ_WEATHER" /> <!-- Permission for self Weather Provider -->
 
     <application
         android:name=".Iconify"
@@ -186,7 +186,7 @@
             tools:ignore="ExportedContentProvider" /> <!-- Remote Preferences Provider -->
         <provider
             android:name=".utils.weather.WeatherContentProvider"
-            android:authorities="com.drdisagree.iconify.weatherprovider"
+            android:authorities="com.hayao0819.liconify.weatherprovider"
             android:exported="true"
             tools:ignore="ExportedContentProvider" /> <!-- Weather Content Provider -->
 

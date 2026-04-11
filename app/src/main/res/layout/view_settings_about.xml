@@ -6,13 +6,13 @@
     android:animateLayoutChanges="true"
     android:orientation="vertical">
 
-    <com.drdisagree.iconify.ui.widgets.TitleWidget
+    <com.hayao0819.liconify.ui.widgets.TitleWidget
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:iconSpaceReserved="true"
         app:titleText="@string/settings_section_title_about" />
 
-    <com.drdisagree.iconify.ui.widgets.MenuWidget
+    <com.hayao0819.liconify.ui.widgets.MenuWidget
         android:id="@+id/github_repository"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -20,7 +20,7 @@
         app:summaryText="@string/settings_github_repository_desc"
         app:titleText="@string/settings_github_repository_title" />
 
-    <com.drdisagree.iconify.ui.widgets.MenuWidget
+    <com.hayao0819.liconify.ui.widgets.MenuWidget
         android:id="@+id/telegram_group"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -28,7 +28,7 @@
         app:summaryText="@string/settings_telegram_group_desc"
         app:titleText="@string/settings_telegram_group_title" />
 
-    <com.drdisagree.iconify.ui.widgets.MenuWidget
+    <com.hayao0819.liconify.ui.widgets.MenuWidget
         android:id="@+id/credits"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

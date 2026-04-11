@@ -5,13 +5,13 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <com.drdisagree.iconify.ui.widgets.TitleWidget
+    <com.hayao0819.liconify.ui.widgets.TitleWidget
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:iconSpaceReserved="true"
         app:titleText="@string/settings_section_title_xposed" />
 
-    <com.drdisagree.iconify.ui.widgets.SwitchWidget
+    <com.hayao0819.liconify.ui.widgets.SwitchWidget
         android:id="@+id/hide_warn_message"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -20,7 +20,7 @@
         app:summaryText="@string/settings_show_warning_desc"
         app:titleText="@string/settings_show_warning_title" />
 
-    <com.drdisagree.iconify.ui.widgets.RadioDialogWidget
+    <com.hayao0819.liconify.ui.widgets.RadioDialogWidget
         android:id="@+id/mod_applying_method"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

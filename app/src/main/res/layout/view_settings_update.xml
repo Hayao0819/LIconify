@@ -6,21 +6,21 @@
     android:animateLayoutChanges="true"
     android:orientation="vertical">
 
-    <com.drdisagree.iconify.ui.widgets.TitleWidget
+    <com.hayao0819.liconify.ui.widgets.TitleWidget
         android:id="@+id/settings_misc_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:iconSpaceReserved="true"
         app:titleText="@string/settings_section_title_update" />
 
-    <com.drdisagree.iconify.ui.widgets.MenuWidget
+    <com.hayao0819.liconify.ui.widgets.MenuWidget
         android:id="@+id/check_update"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:icon="@drawable/ic_check_update"
         app:titleText="@string/settings_check_for_update" />
 
-    <com.drdisagree.iconify.ui.widgets.SwitchWidget
+    <com.hayao0819.liconify.ui.widgets.SwitchWidget
         android:id="@+id/auto_update"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -28,7 +28,7 @@
         app:summaryText="@string/settings_auto_update_desc"
         app:titleText="@string/settings_auto_update_title" />
 
-    <com.drdisagree.iconify.ui.widgets.SwitchWidget
+    <com.hayao0819.liconify.ui.widgets.SwitchWidget
         android:id="@+id/auto_update_wifi_only"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

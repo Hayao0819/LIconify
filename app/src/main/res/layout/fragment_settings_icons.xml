@@ -32,7 +32,7 @@
                     android:baselineAligned="false"
                     android:orientation="horizontal">
 
-                    <com.drdisagree.iconify.ui.widgets.RadioDialogWidget
+                    <com.hayao0819.liconify.ui.widgets.RadioDialogWidget
                         android:id="@+id/bg_style"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -41,7 +41,7 @@
                         app:showSelectedPrefix="false"
                         app:titleText="@string/settings_icons_background" />
 
-                    <com.drdisagree.iconify.ui.widgets.RadioDialogWidget
+                    <com.hayao0819.liconify.ui.widgets.RadioDialogWidget
                         android:id="@+id/bg_shape"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -58,7 +58,7 @@
                     android:baselineAligned="false"
                     android:orientation="horizontal">
 
-                    <com.drdisagree.iconify.ui.widgets.RadioDialogWidget
+                    <com.hayao0819.liconify.ui.widgets.RadioDialogWidget
                         android:id="@+id/icon_size"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -67,7 +67,7 @@
                         app:showSelectedPrefix="false"
                         app:titleText="@string/settings_icons_size" />
 
-                    <com.drdisagree.iconify.ui.widgets.RadioDialogWidget
+                    <com.hayao0819.liconify.ui.widgets.RadioDialogWidget
                         android:id="@+id/icon_color"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"

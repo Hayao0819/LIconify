@@ -2,7 +2,7 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <com.drdisagree.iconify.ui.preferences.ListPreference
+    <com.hayao0819.liconify.ui.preferences.ListPreference
         android:defaultValue="0"
         android:entries="@array/volume_panel_style_entries"
         android:entryValues="@array/volume_panel_style_values"
@@ -11,13 +11,13 @@
         app:iconSpaceReserved="false"
         app:useSimpleSummaryProvider="true" />
 
-    <com.drdisagree.iconify.ui.preferences.SwitchPreference
+    <com.hayao0819.liconify.ui.preferences.SwitchPreference
         android:key="xposed_volumepanelpercentage"
         android:summary="@string/volume_percentage_desc"
         android:title="@string/volume_percentage_title"
         app:iconSpaceReserved="false" />
 
-    <com.drdisagree.iconify.ui.preferences.SwitchPreference
+    <com.hayao0819.liconify.ui.preferences.SwitchPreference
         android:key="xposed_volumepanelsafetywarning"
         android:summary="@string/safety_warning_desc"
         android:title="@string/safety_warning_title"

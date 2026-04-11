@@ -39,7 +39,7 @@
 
             </LinearLayout>
 
-            <com.drdisagree.iconify.ui.widgets.ColorPickerWidget
+            <com.hayao0819.liconify.ui.widgets.ColorPickerWidget
                 android:id="@+id/primary_color"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -47,7 +47,7 @@
                 app:summaryText="@string/primary_color_desc"
                 app:titleText="@string/primary_color" />
 
-            <com.drdisagree.iconify.ui.widgets.ColorPickerWidget
+            <com.hayao0819.liconify.ui.widgets.ColorPickerWidget
                 android:id="@+id/secondary_color"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

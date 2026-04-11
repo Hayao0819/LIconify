@@ -6,12 +6,12 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <com.drdisagree.iconify.ui.widgets.TitleWidget
+    <com.hayao0819.liconify.ui.widgets.TitleWidget
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:titleText="@string/section_title_pill_appearance" />
 
-    <com.drdisagree.iconify.ui.widgets.SliderWidget
+    <com.hayao0819.liconify.ui.widgets.SliderWidget
         android:id="@+id/pill_width"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -22,7 +22,7 @@
         app:titleText="@string/pill_width_title"
         app:valueFormat="dp" />
 
-    <com.drdisagree.iconify.ui.widgets.SliderWidget
+    <com.hayao0819.liconify.ui.widgets.SliderWidget
         android:id="@+id/pill_thickness"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -33,7 +33,7 @@
         app:titleText="@string/pill_thickness_title"
         app:valueFormat="dp" />
 
-    <com.drdisagree.iconify.ui.widgets.SliderWidget
+    <com.hayao0819.liconify.ui.widgets.SliderWidget
         android:id="@+id/pill_bottom_space"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

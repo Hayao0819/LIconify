@@ -40,7 +40,7 @@
     <string name="searchpreference_clear_history">مسح التاريخ</string>
     <string name="searchpreference_no_result">لا يوجد نتائج</string>
     <!-- Home -->
-    <string name="activity_title_home_page">Iconify</string>
+    <string name="activity_title_home_page">LIconify</string>
     <string name="activity_title_icon_pack">حزمة الأيقونات</string>
     <string name="activity_desc_icon_pack">تغيير حزمة ايقونات النظام</string>
     <string name="activity_title_cellular_icons">أيقونات شبكة الجوال</string>

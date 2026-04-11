@@ -21,21 +21,21 @@
             android:animateLayoutChanges="true"
             android:orientation="vertical">
 
-            <com.drdisagree.iconify.ui.widgets.SwitchWidget
+            <com.hayao0819.liconify.ui.widgets.SwitchWidget
                 android:id="@+id/enable_colored_battery"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:summaryText="@string/enable_colored_battery_desc"
                 app:titleText="@string/enable_colored_battery_title" />
 
-            <com.drdisagree.iconify.ui.widgets.ColorPickerWidget
+            <com.hayao0819.liconify.ui.widgets.ColorPickerWidget
                 android:id="@+id/battery_background_color"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:summaryText="@string/battery_background_color_desc"
                 app:titleText="@string/battery_background_color_title" />
 
-            <com.drdisagree.iconify.ui.widgets.ColorPickerWidget
+            <com.hayao0819.liconify.ui.widgets.ColorPickerWidget
                 android:id="@+id/battery_filled_color"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

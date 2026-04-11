@@ -38,26 +38,26 @@
                 layout="@layout/view_media_player_preview_system"
                 android:visibility="gone" />
 
-            <com.drdisagree.iconify.ui.widgets.TitleWidget
+            <com.hayao0819.liconify.ui.widgets.TitleWidget
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:titleText="@string/section_title_background_color" />
 
-            <com.drdisagree.iconify.ui.widgets.SwitchWidget
+            <com.hayao0819.liconify.ui.widgets.SwitchWidget
                 android:id="@+id/mp_accent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:summaryText="@string/mp_accent_background_desc"
                 app:titleText="@string/mp_accent_background_title" />
 
-            <com.drdisagree.iconify.ui.widgets.SwitchWidget
+            <com.hayao0819.liconify.ui.widgets.SwitchWidget
                 android:id="@+id/mp_system"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:summaryText="@string/mp_system_background_desc"
                 app:titleText="@string/mp_system_background_title" />
 
-            <com.drdisagree.iconify.ui.widgets.SwitchWidget
+            <com.hayao0819.liconify.ui.widgets.SwitchWidget
                 android:id="@+id/mp_pitch_black"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

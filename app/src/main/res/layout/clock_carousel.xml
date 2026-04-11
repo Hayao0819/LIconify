@@ -23,7 +23,7 @@
             android:layout_marginBottom="24dp"
             android:background="@drawable/container_no_ripple" />
 
-        <com.drdisagree.iconify.ui.widgets.FixedWidthDisplayRatioFrameLayout
+        <com.hayao0819.liconify.ui.widgets.FixedWidthDisplayRatioFrameLayout
             android:id="@+id/clock_scale_view_0"
             android:layout_width="@dimen/screen_preview_width"
             android:layout_height="wrap_content"
@@ -31,14 +31,14 @@
             android:clipChildren="false"
             android:importantForAccessibility="noHideDescendants">
 
-            <com.drdisagree.iconify.ui.widgets.ClockHostView
+            <com.hayao0819.liconify.ui.widgets.ClockHostView
                 android:id="@+id/clock_host_view_0"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:clipChildren="false" />
 
-        </com.drdisagree.iconify.ui.widgets.FixedWidthDisplayRatioFrameLayout>
+        </com.hayao0819.liconify.ui.widgets.FixedWidthDisplayRatioFrameLayout>
 
         <TextView
             android:id="@+id/clock_style_0"
@@ -66,7 +66,7 @@
             android:layout_marginBottom="24dp"
             android:background="@drawable/container_no_ripple" />
 
-        <com.drdisagree.iconify.ui.widgets.FixedWidthDisplayRatioFrameLayout
+        <com.hayao0819.liconify.ui.widgets.FixedWidthDisplayRatioFrameLayout
             android:id="@+id/clock_scale_view_1"
             android:layout_width="@dimen/screen_preview_width"
             android:layout_height="wrap_content"
@@ -74,14 +74,14 @@
             android:clipChildren="false"
             android:importantForAccessibility="noHideDescendants">
 
-            <com.drdisagree.iconify.ui.widgets.ClockHostView
+            <com.hayao0819.liconify.ui.widgets.ClockHostView
                 android:id="@+id/clock_host_view_1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:clipChildren="false" />
 
-        </com.drdisagree.iconify.ui.widgets.FixedWidthDisplayRatioFrameLayout>
+        </com.hayao0819.liconify.ui.widgets.FixedWidthDisplayRatioFrameLayout>
 
         <TextView
             android:id="@+id/clock_style_1"
@@ -111,7 +111,7 @@
             android:alpha="0.0"
             android:background="@drawable/container_no_ripple" />
 
-        <com.drdisagree.iconify.ui.widgets.FixedWidthDisplayRatioFrameLayout
+        <com.hayao0819.liconify.ui.widgets.FixedWidthDisplayRatioFrameLayout
             android:id="@+id/clock_scale_view_2"
             android:layout_width="@dimen/screen_preview_width"
             android:layout_height="wrap_content"
@@ -119,14 +119,14 @@
             android:clipChildren="false"
             android:importantForAccessibility="noHideDescendants">
 
-            <com.drdisagree.iconify.ui.widgets.ClockHostView
+            <com.hayao0819.liconify.ui.widgets.ClockHostView
                 android:id="@+id/clock_host_view_2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:clipChildren="false" />
 
-        </com.drdisagree.iconify.ui.widgets.FixedWidthDisplayRatioFrameLayout>
+        </com.hayao0819.liconify.ui.widgets.FixedWidthDisplayRatioFrameLayout>
 
         <TextView
             android:id="@+id/clock_style_2"
@@ -154,7 +154,7 @@
             android:layout_marginBottom="24dp"
             android:background="@drawable/container_no_ripple" />
 
-        <com.drdisagree.iconify.ui.widgets.FixedWidthDisplayRatioFrameLayout
+        <com.hayao0819.liconify.ui.widgets.FixedWidthDisplayRatioFrameLayout
             android:id="@+id/clock_scale_view_3"
             android:layout_width="@dimen/screen_preview_width"
             android:layout_height="wrap_content"
@@ -162,14 +162,14 @@
             android:clipChildren="false"
             android:importantForAccessibility="noHideDescendants">
 
-            <com.drdisagree.iconify.ui.widgets.ClockHostView
+            <com.hayao0819.liconify.ui.widgets.ClockHostView
                 android:id="@+id/clock_host_view_3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:clipChildren="false" />
 
-        </com.drdisagree.iconify.ui.widgets.FixedWidthDisplayRatioFrameLayout>
+        </com.hayao0819.liconify.ui.widgets.FixedWidthDisplayRatioFrameLayout>
 
         <TextView
             android:id="@+id/clock_style_3"
@@ -197,7 +197,7 @@
             android:layout_marginBottom="24dp"
             android:background="@drawable/container_no_ripple" />
 
-        <com.drdisagree.iconify.ui.widgets.FixedWidthDisplayRatioFrameLayout
+        <com.hayao0819.liconify.ui.widgets.FixedWidthDisplayRatioFrameLayout
             android:id="@+id/clock_scale_view_4"
             android:layout_width="@dimen/screen_preview_width"
             android:layout_height="wrap_content"
@@ -205,14 +205,14 @@
             android:clipChildren="false"
             android:importantForAccessibility="noHideDescendants">
 
-            <com.drdisagree.iconify.ui.widgets.ClockHostView
+            <com.hayao0819.liconify.ui.widgets.ClockHostView
                 android:id="@+id/clock_host_view_4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:clipChildren="false" />
 
-        </com.drdisagree.iconify.ui.widgets.FixedWidthDisplayRatioFrameLayout>
+        </com.hayao0819.liconify.ui.widgets.FixedWidthDisplayRatioFrameLayout>
 
         <TextView
             android:id="@+id/clock_style_4"

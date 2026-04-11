@@ -21,12 +21,12 @@
             android:animateLayoutChanges="true"
             android:orientation="vertical">
 
-            <com.drdisagree.iconify.ui.widgets.TitleWidget
+            <com.hayao0819.liconify.ui.widgets.TitleWidget
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:titleText="@string/section_title_spacing" />
 
-            <com.drdisagree.iconify.ui.widgets.SliderWidget
+            <com.hayao0819.liconify.ui.widgets.SliderWidget
                 android:id="@+id/sb_left_padding"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -38,7 +38,7 @@
                 app:titleText="@string/sb_left_padding"
                 app:valueFormat="dp" />
 
-            <com.drdisagree.iconify.ui.widgets.SliderWidget
+            <com.hayao0819.liconify.ui.widgets.SliderWidget
                 android:id="@+id/sb_right_padding"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -50,7 +50,7 @@
                 app:titleText="@string/sb_right_padding"
                 app:valueFormat="dp" />
 
-            <com.drdisagree.iconify.ui.widgets.SliderWidget
+            <com.hayao0819.liconify.ui.widgets.SliderWidget
                 android:id="@+id/sb_height"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -62,7 +62,7 @@
                 app:titleText="@string/sb_height"
                 app:valueFormat="dp" />
 
-            <com.drdisagree.iconify.ui.widgets.TitleWidget
+            <com.hayao0819.liconify.ui.widgets.TitleWidget
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:titleText="@string/section_title_color" />

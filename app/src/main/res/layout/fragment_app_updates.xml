@@ -207,13 +207,13 @@
 
             </LinearLayout>
 
-            <com.drdisagree.iconify.ui.widgets.TitleWidget
+            <com.hayao0819.liconify.ui.widgets.TitleWidget
                 android:id="@+id/settings_misc_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:titleText="@string/section_title_schedule" />
 
-            <com.drdisagree.iconify.ui.widgets.RadioDialogWidget
+            <com.hayao0819.liconify.ui.widgets.RadioDialogWidget
                 android:id="@+id/update_schedule"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

@@ -1,0 +1,217 @@
+package com.hayao0819.liconify.xposed.modules.lockscreen
+
+import android.annotation.SuppressLint
+import android.app.WallpaperManager
+import android.content.Context
+import android.content.res.XResources
+import android.graphics.Bitmap
+import android.os.Build
+import android.os.Handler
+import android.os.Looper
+import android.view.View
+import android.view.View.OnAttachStateChangeListener
+import android.view.ViewGroup
+import com.hayao0819.liconify.data.common.Const.SYSTEMUI_PACKAGE
+import com.hayao0819.liconify.data.common.Preferences.HIDE_LOCKSCREEN_LOCK_ICON
+import com.hayao0819.liconify.data.common.Preferences.LOCKSCREEN_WALLPAPER_BLUR
+import com.hayao0819.liconify.data.common.Preferences.LOCKSCREEN_WALLPAPER_BLUR_RADIUS
+import com.hayao0819.liconify.xposed.HookRes.Companion.resParams
+import com.hayao0819.liconify.xposed.ModPack
+import com.hayao0819.liconify.xposed.modules.extras.utils.TimeUtils.isSecurityPatchAfter
+import com.hayao0819.liconify.xposed.modules.extras.utils.ViewHelper.applyBlur
+import com.hayao0819.liconify.xposed.modules.extras.utils.ViewHelper.hideView
+import com.hayao0819.liconify.xposed.modules.extras.utils.toolkit.XposedHook.Companion.findClass
+import com.hayao0819.liconify.xposed.modules.extras.utils.toolkit.callMethod
+import com.hayao0819.liconify.xposed.modules.extras.utils.toolkit.callMethodSilently
+import com.hayao0819.liconify.xposed.modules.extras.utils.toolkit.hookConstructor
+import com.hayao0819.liconify.xposed.modules.extras.utils.toolkit.hookLayout
+import com.hayao0819.liconify.xposed.modules.extras.utils.toolkit.hookMethod
+import com.hayao0819.liconify.xposed.utils.OemUtils
+import com.hayao0819.liconify.xposed.utils.XPrefs.Xprefs
+import de.robv.android.xposed.XC_MethodHook
+import de.robv.android.xposed.callbacks.XC_LoadPackage.LoadPackageParam
+import java.util.Calendar
+
+class Lockscreen(context: Context) : ModPack(context) {
+
+    private var wallpaperBlurEnabled = false
+    private var wallpaperBlurRadius = 6.25f
+    private var hideLockscreenLockIcon = false
+
+    override fun updatePrefs(vararg key: String) {
+        Xprefs.apply {
+            wallpaperBlurEnabled = getBoolean(LOCKSCREEN_WALLPAPER_BLUR, false)
+            wallpaperBlurRadius = getSliderInt(LOCKSCREEN_WALLPAPER_BLUR_RADIUS, 25) / 100f * 25f
+            hideLockscreenLockIcon = getBoolean(HIDE_LOCKSCREEN_LOCK_ICON, false)
+        }
+
+        when (key.firstOrNull()) {
+            HIDE_LOCKSCREEN_LOCK_ICON -> hideLockscreenLockIcon()
+        }
+    }
+
+    override fun handleLoadPackage(loadPackageParam: LoadPackageParam) {
+        blurredWallpaper()
+        hideLockscreenLockIcon()
+    }
+
+    private fun blurredWallpaper() {
+        val canvasEngineClass =
+            findClass("$SYSTEMUI_PACKAGE.wallpapers.ImageWallpaper\$CanvasEngine")
+
+        canvasEngineClass
+            .hookMethod("drawFrameOnCanvas")
+            .parameters(Bitmap::class.java)
+            .runBefore { param ->
+                val canvasEngine = param.thisObject
+                val isLockscreenWallpaper = (canvasEngine.callMethodSilently(
+                    "getWallpaperFlags"
+                ) as? Int ?: WallpaperManager.FLAG_LOCK) == WallpaperManager.FLAG_LOCK
+
+                if (wallpaperBlurEnabled && wallpaperBlurRadius > 0 && isLockscreenWallpaper) {
+                    val bitmap = param.args[0] as Bitmap
+                    val displayContext = canvasEngine.callMethod("getDisplayContext") as Context
+
+                    param.args[0] = bitmap.applyBlur(displayContext, wallpaperBlurRadius)
+                }
+            }
+    }
+
+    @SuppressLint("DiscouragedApi")
+    private fun hideLockscreenLockIcon() {
+        if (!isComposeLockscreen) {
+            val xResources: XResources = resParams[SYSTEMUI_PACKAGE]?.res ?: return
+
+            xResources
+                .hookLayout()
+                .packageName(SYSTEMUI_PACKAGE)
+                .resource("layout", "status_bar_expanded")
+                .suppressError()
+                .run { liparam ->
+                    if (!hideLockscreenLockIcon) return@run
+
+                    liparam.view.findViewById<View>(
+                        liparam.res.getIdentifier(
+                            "lock_icon_view",
+                            "id",
+                            mContext.packageName
+                        )
+                    ).hideView()
+                }
+        } else {
+            val aodBurnInLayerClass =
+                findClass("$SYSTEMUI_PACKAGE.keyguard.ui.view.layout.sections.AodBurnInLayer")
+            var aodBurnInLayerHooked = false
+
+            // Apparently ROMs like CrDroid doesn't even use AodBurnInLayer class
+            // So we hook which ever is available
+            val keyguardStatusViewClass = findClass("com.android.keyguard.KeyguardStatusView")
+            var keyguardStatusViewHooked = false
+
+            var lockIconInitialized = false
+
+            fun hideLockIcon(param: XC_MethodHook.MethodHookParam) {
+                val entryV = param.thisObject as View
+
+                // If both are already hooked, return. We only want to hook one
+                if (aodBurnInLayerHooked && keyguardStatusViewHooked) return
+
+                entryV.addOnAttachStateChangeListener(object : OnAttachStateChangeListener {
+                    override fun onViewAttachedToWindow(v: View) {
+                        if (lockIconInitialized) return
+
+                        Handler(Looper.getMainLooper()).postDelayed({
+                            if (!hideLockscreenLockIcon) return@postDelayed
+                            if (lockIconInitialized) return@postDelayed
+
+                            val rootView = v.parent as? ViewGroup ?: return@postDelayed
+
+                            // If rootView is not R.id.keyguard_root_view, detach and return
+                            if (rootView.id != mContext.resources.getIdentifier(
+                                    "keyguard_root_view",
+                                    "id",
+                                    mContext.packageName
+                                )
+                            ) {
+                                entryV.removeOnAttachStateChangeListener(this)
+                                return@postDelayed
+                            }
+
+                            // Sony has duplicate keyguard_root_view; the correct one has clipChildren=false
+                            if (OemUtils.isSony && rootView.clipChildren) {
+                                return@postDelayed
+                            }
+
+                            lockIconInitialized = true
+
+                            listOf(
+                                "device_entry_icon_bg",
+                                "device_entry_icon_fg"
+                            ).map { resourceName ->
+                                val resourceId = mContext.resources.getIdentifier(
+                                    resourceName,
+                                    "id",
+                                    mContext.packageName
+                                )
+                                if (resourceId != -1) {
+                                    rootView.findViewById<View?>(resourceId)
+                                } else {
+                                    null
+                                }
+                            }.forEach { view ->
+                                view.hideView()
+                            }
+
+                            entryV.removeOnAttachStateChangeListener(this)
+                        }, 1000)
+                    }
+
+                    override fun onViewDetachedFromWindow(v: View) {}
+                })
+            }
+
+            aodBurnInLayerClass
+                .hookConstructor()
+                .runAfter { param ->
+                    if (!hideLockscreenLockIcon) return@runAfter
+
+                    aodBurnInLayerHooked = true
+
+                    hideLockIcon(param)
+                }
+
+            keyguardStatusViewClass
+                .hookConstructor()
+                .runAfter { param ->
+                    if (!hideLockscreenLockIcon) return@runAfter
+
+                    keyguardStatusViewHooked = true
+
+                    hideLockIcon(param)
+                }
+        }
+    }
+
+    companion object {
+        val isComposeLockscreen: Boolean = run {
+            val hasAodBurnInLayer = findClass(
+                "$SYSTEMUI_PACKAGE.keyguard.ui.view.layout.sections.AodBurnInLayer",
+                suppressError = true
+            ) != null
+
+            val hasBatteryMeterViewEx = findClass(
+                "com.nothing.systemui.battery.BatteryMeterViewEx",
+                suppressError = true
+            ) != null
+
+            val isSupportedAndroidVersion =
+                Build.VERSION.SDK_INT >= Build.VERSION_CODES.VANILLA_ICE_CREAM
+
+            val isAfterSecurityPatch = isSecurityPatchAfter(
+                Calendar.getInstance().apply { set(2024, Calendar.NOVEMBER, 30) }
+            )
+
+            hasAodBurnInLayer && !hasBatteryMeterViewEx && isSupportedAndroidVersion && isAfterSecurityPatch
+        }
+    }
+}

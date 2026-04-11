@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
-    <string name="app_name" translatable="false">Iconify</string>
+    <string name="app_name" translatable="false">LIconify</string>
     <string name="app_moto">Customize Boring Android UI</string>
 
     <!-- Onboarding -->
@@ -43,7 +43,7 @@
     <string name="searchpreference_no_result">No result</string>
 
     <!-- Home -->
-    <string name="activity_title_home_page">Iconify</string>
+    <string name="activity_title_home_page">LIconify</string>
     <string name="activity_title_icon_pack">Icon Pack</string>
     <string name="activity_desc_icon_pack">Change system icon pack</string>
     <string name="activity_title_cellular_icons">Cellular Icons</string>

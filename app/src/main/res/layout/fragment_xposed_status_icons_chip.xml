@@ -22,19 +22,19 @@
             android:animateLayoutChanges="true"
             android:orientation="vertical">
 
-            <com.drdisagree.iconify.ui.widgets.TitleWidget
+            <com.hayao0819.liconify.ui.widgets.TitleWidget
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:titleText="@string/section_title_background" />
 
-            <com.drdisagree.iconify.ui.widgets.SwitchWidget
+            <com.hayao0819.liconify.ui.widgets.SwitchWidget
                 android:id="@+id/accent_fill_color"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:isChecked="true"
                 app:titleText="@string/accent_fill_color" />
 
-            <com.drdisagree.iconify.ui.widgets.RadioDialogWidget
+            <com.hayao0819.liconify.ui.widgets.RadioDialogWidget
                 android:id="@+id/gradient_direction"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -42,49 +42,49 @@
                 app:showSelectedPrefix="false"
                 app:titleText="@string/gradient_direction" />
 
-            <com.drdisagree.iconify.ui.widgets.ColorPickerWidget
+            <com.hayao0819.liconify.ui.widgets.ColorPickerWidget
                 android:id="@+id/fill_start_color"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:titleText="@string/fill_start_color" />
 
-            <com.drdisagree.iconify.ui.widgets.ColorPickerWidget
+            <com.hayao0819.liconify.ui.widgets.ColorPickerWidget
                 android:id="@+id/fill_end_color"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:titleText="@string/fill_end_color" />
 
-            <com.drdisagree.iconify.ui.widgets.TitleWidget
+            <com.hayao0819.liconify.ui.widgets.TitleWidget
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:titleText="@string/section_title_border" />
 
-            <com.drdisagree.iconify.ui.widgets.SwitchWidget
+            <com.hayao0819.liconify.ui.widgets.SwitchWidget
                 android:id="@+id/enable_border"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:titleText="@string/enable_border" />
 
-            <com.drdisagree.iconify.ui.widgets.SwitchWidget
+            <com.hayao0819.liconify.ui.widgets.SwitchWidget
                 android:id="@+id/accent_border_color"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:isChecked="true"
                 app:titleText="@string/accent_border_color" />
 
-            <com.drdisagree.iconify.ui.widgets.ColorPickerWidget
+            <com.hayao0819.liconify.ui.widgets.ColorPickerWidget
                 android:id="@+id/border_color"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:titleText="@string/border_color" />
 
-            <com.drdisagree.iconify.ui.widgets.SwitchWidget
+            <com.hayao0819.liconify.ui.widgets.SwitchWidget
                 android:id="@+id/dashed_border"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:titleText="@string/dashed_border" />
 
-            <com.drdisagree.iconify.ui.widgets.SliderWidget
+            <com.hayao0819.liconify.ui.widgets.SliderWidget
                 android:id="@+id/dash_width"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -95,7 +95,7 @@
                 app:titleText="@string/dash_width"
                 app:valueFormat="dp" />
 
-            <com.drdisagree.iconify.ui.widgets.SliderWidget
+            <com.hayao0819.liconify.ui.widgets.SliderWidget
                 android:id="@+id/dash_gap"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -106,7 +106,7 @@
                 app:titleText="@string/dash_gap"
                 app:valueFormat="dp" />
 
-            <com.drdisagree.iconify.ui.widgets.SliderWidget
+            <com.hayao0819.liconify.ui.widgets.SliderWidget
                 android:id="@+id/border_thickness"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -117,12 +117,12 @@
                 app:titleText="@string/border_thickness"
                 app:valueFormat="dp" />
 
-            <com.drdisagree.iconify.ui.widgets.TitleWidget
+            <com.hayao0819.liconify.ui.widgets.TitleWidget
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:titleText="@string/section_title_padding" />
 
-            <com.drdisagree.iconify.ui.widgets.SliderWidget
+            <com.hayao0819.liconify.ui.widgets.SliderWidget
                 android:id="@+id/padding_left"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -133,7 +133,7 @@
                 app:titleText="@string/padding_left"
                 app:valueFormat="dp" />
 
-            <com.drdisagree.iconify.ui.widgets.SliderWidget
+            <com.hayao0819.liconify.ui.widgets.SliderWidget
                 android:id="@+id/padding_right"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -144,7 +144,7 @@
                 app:titleText="@string/padding_right"
                 app:valueFormat="dp" />
 
-            <com.drdisagree.iconify.ui.widgets.SliderWidget
+            <com.hayao0819.liconify.ui.widgets.SliderWidget
                 android:id="@+id/padding_top"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -155,7 +155,7 @@
                 app:titleText="@string/padding_top"
                 app:valueFormat="dp" />
 
-            <com.drdisagree.iconify.ui.widgets.SliderWidget
+            <com.hayao0819.liconify.ui.widgets.SliderWidget
                 android:id="@+id/padding_bottom"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -166,12 +166,12 @@
                 app:titleText="@string/padding_bottom"
                 app:valueFormat="dp" />
 
-            <com.drdisagree.iconify.ui.widgets.TitleWidget
+            <com.hayao0819.liconify.ui.widgets.TitleWidget
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:titleText="@string/section_title_corner_radius" />
 
-            <com.drdisagree.iconify.ui.widgets.SliderWidget
+            <com.hayao0819.liconify.ui.widgets.SliderWidget
                 android:id="@+id/corner_radius_top_left"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -182,7 +182,7 @@
                 app:titleText="@string/top_left_radius"
                 app:valueFormat="dp" />
 
-            <com.drdisagree.iconify.ui.widgets.SliderWidget
+            <com.hayao0819.liconify.ui.widgets.SliderWidget
                 android:id="@+id/corner_radius_top_right"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -193,7 +193,7 @@
                 app:titleText="@string/top_right_radius"
                 app:valueFormat="dp" />
 
-            <com.drdisagree.iconify.ui.widgets.SliderWidget
+            <com.hayao0819.liconify.ui.widgets.SliderWidget
                 android:id="@+id/corner_radius_bottom_left"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -204,7 +204,7 @@
                 app:titleText="@string/bottom_left_radius"
                 app:valueFormat="dp" />
 
-            <com.drdisagree.iconify.ui.widgets.SliderWidget
+            <com.hayao0819.liconify.ui.widgets.SliderWidget
                 android:id="@+id/corner_radius_bottom_right"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

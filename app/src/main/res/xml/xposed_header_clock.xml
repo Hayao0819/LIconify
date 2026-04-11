@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:search="http://schemas.android.com/apk/com.drdisagree.iconify.ui.preferences.preferencesearch">
+    xmlns:search="http://schemas.android.com/apk/com.hayao0819.liconify.ui.preferences.preferencesearch">
 
-    <com.drdisagree.iconify.ui.preferences.MasterSwitchPreference
+    <com.hayao0819.liconify.ui.preferences.MasterSwitchPreference
         android:key="xposed_headerclock"
         android:title="@string/custom_header_clock_title" />
 
-    <com.drdisagree.iconify.ui.preferences.RecyclerPreference
+    <com.hayao0819.liconify.ui.preferences.RecyclerPreference
         android:dependency="xposed_headerclock"
         android:key="xposed_headerclockstyle"
         android:summary="@string/pick_style"
@@ -15,14 +15,14 @@
         app:iconSpaceReserved="false"
         search:ignore="true" />
 
-    <com.drdisagree.iconify.ui.preferences.SwitchPreference
+    <com.hayao0819.liconify.ui.preferences.SwitchPreference
         android:dependency="xposed_headerclock"
         android:key="xposed_headerclockfont"
         android:summary="@string/header_clock_font_desc"
         android:title="@string/header_clock_font_title"
         app:iconSpaceReserved="false" />
 
-    <com.drdisagree.iconify.ui.preferences.FilePickerPreference
+    <com.hayao0819.liconify.ui.preferences.FilePickerPreference
         android:dependency="xposed_headerclockfont"
         android:key="xposed_headerclockfontpicker"
         android:summary="@string/file_picker_desc"
@@ -31,14 +31,14 @@
         app:iconSpaceReserved="false"
         search:ignore="true" />
 
-    <com.drdisagree.iconify.ui.preferences.SwitchPreference
+    <com.hayao0819.liconify.ui.preferences.SwitchPreference
         android:dependency="xposed_headerclock"
         android:key="xposed_headerclockcolor"
         android:summary="@string/custom_header_clock_color_desc"
         android:title="@string/custom_header_clock_color_title"
         app:iconSpaceReserved="false" />
 
-    <com.drdisagree.iconify.ui.preferences.ColorPreference
+    <com.hayao0819.liconify.ui.preferences.ColorPreference
         android:defaultValue="@color/cpv_color_primary"
         android:dependency="xposed_headerclockcolor"
         android:key="xposed_headerclockcolorcodeaccent1"
@@ -48,7 +48,7 @@
         app:cpv_showAlphaSlider="true"
         app:iconSpaceReserved="false" />
 
-    <com.drdisagree.iconify.ui.preferences.ColorPreference
+    <com.hayao0819.liconify.ui.preferences.ColorPreference
         android:defaultValue="@color/cpv_color_secondary"
         android:dependency="xposed_headerclockcolor"
         android:key="xposed_headerclockcolorcodeaccent2"
@@ -58,7 +58,7 @@
         app:cpv_showAlphaSlider="true"
         app:iconSpaceReserved="false" />
 
-    <com.drdisagree.iconify.ui.preferences.ColorPreference
+    <com.hayao0819.liconify.ui.preferences.ColorPreference
         android:defaultValue="@color/cpv_color_tertiary"
         android:dependency="xposed_headerclockcolor"
         android:key="xposed_headerclockcolorcodeaccent3"
@@ -68,7 +68,7 @@
         app:cpv_showAlphaSlider="true"
         app:iconSpaceReserved="false" />
 
-    <com.drdisagree.iconify.ui.preferences.ColorPreference
+    <com.hayao0819.liconify.ui.preferences.ColorPreference
         android:defaultValue="0xffffffff"
         android:dependency="xposed_headerclockcolor"
         android:key="xposed_headerclockcolorcodetext1"
@@ -78,7 +78,7 @@
         app:cpv_showAlphaSlider="true"
         app:iconSpaceReserved="false" />
 
-    <com.drdisagree.iconify.ui.preferences.ColorPreference
+    <com.hayao0819.liconify.ui.preferences.ColorPreference
         android:defaultValue="0xff000000"
         android:dependency="xposed_headerclockcolor"
         android:key="xposed_headerclockcolorcodetext2"
@@ -88,14 +88,14 @@
         app:cpv_showAlphaSlider="true"
         app:iconSpaceReserved="false" />
 
-    <com.drdisagree.iconify.ui.preferences.SwitchPreference
+    <com.hayao0819.liconify.ui.preferences.SwitchPreference
         android:dependency="xposed_headerclock"
         android:key="xposed_headerclockcentered"
         android:summary="@string/header_clock_center_clock_desc"
         android:title="@string/header_clock_center_clock_title"
         app:iconSpaceReserved="false" />
 
-    <com.drdisagree.iconify.ui.preferences.SwitchPreference
+    <com.hayao0819.liconify.ui.preferences.SwitchPreference
         android:dependency="xposed_headerclock"
         android:key="xposed_headerclocklandscape"
         android:summary="@string/header_clock_hide_landscape_desc"
@@ -103,7 +103,7 @@
         app:defaultValue="true"
         app:iconSpaceReserved="false" />
 
-    <com.drdisagree.iconify.ui.preferences.SliderPreference
+    <com.hayao0819.liconify.ui.preferences.SliderPreference
         android:dependency="xposed_headerclock"
         android:key="xposed_headerclocktextscaling"
         android:title="@string/header_clock_font_text_scaling_title"
@@ -118,7 +118,7 @@
         app:tickInterval="1"
         app:valueFormat="x" />
 
-    <com.drdisagree.iconify.ui.preferences.SliderPreference
+    <com.hayao0819.liconify.ui.preferences.SliderPreference
         android:dependency="xposed_headerclock"
         android:key="xposed_headerclocksidemargin"
         android:title="@string/header_clock_side_margin_title"
@@ -129,7 +129,7 @@
         app:tickInterval="1"
         app:valueFormat="dp" />
 
-    <com.drdisagree.iconify.ui.preferences.SliderPreference
+    <com.hayao0819.liconify.ui.preferences.SliderPreference
         android:dependency="xposed_headerclock"
         android:key="xposed_headerclocktopmargin"
         android:title="@string/fixed_status_icons_top_margin"
@@ -140,7 +140,7 @@
         app:tickInterval="1"
         app:valueFormat="dp" />
 
-    <com.drdisagree.iconify.ui.preferences.SliderPreference
+    <com.hayao0819.liconify.ui.preferences.SliderPreference
         android:dependency="xposed_headerclock"
         android:key="xposed_headerclockexpansiony"
         android:title="@string/header_clock_expansion_y_title"

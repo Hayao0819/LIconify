@@ -22,21 +22,21 @@
 }
 
 # Activity and Fragment names
--keep class com.drdisagree.iconify.ui.activities.**
--keep class com.drdisagree.iconify.ui.fragments.**
+-keep class com.hayao0819.liconify.ui.activities.**
+-keep class com.hayao0819.liconify.ui.fragments.**
 
 # Xposed
 -keep class de.robv.android.xposed.**
--keep class com.drdisagree.iconify.xposed.InitHook
--keepnames class com.drdisagree.iconify.xposed.**
--keepnames class com.drdisagree.iconify.xposed.utils.XPrefs
--keep class com.drdisagree.iconify.xposed.** {
+-keep class com.hayao0819.liconify.xposed.InitHook
+-keepnames class com.hayao0819.liconify.xposed.**
+-keepnames class com.hayao0819.liconify.xposed.utils.XPrefs
+-keep class com.hayao0819.liconify.xposed.** {
     <init>(android.content.Context);
 }
 
 # Weather
--keepnames class com.drdisagree.iconify.utils.weather.**
--keep class com.drdisagree.iconify.utils.weather.** { *; }
+-keepnames class com.hayao0819.liconify.utils.weather.**
+-keep class com.hayao0819.liconify.utils.weather.** { *; }
 
 # EventBus
 -keepattributes *Annotation*
@@ -70,8 +70,8 @@
 -allowaccessmodification
 
 # Root Service
--keep class com.drdisagree.iconify.services.RootProviderProxy { *; }
--keep class com.drdisagree.iconify.IRootProviderProxy { *; }
+-keep class com.hayao0819.liconify.services.RootProviderProxy { *; }
+-keep class com.hayao0819.liconify.IRootProviderProxy { *; }
 
 # AIDL Classes
 -keep interface **.I* { *; }

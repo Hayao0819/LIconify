@@ -20,7 +20,7 @@
             android:animateLayoutChanges="true"
             android:orientation="vertical">
 
-            <com.drdisagree.iconify.ui.widgets.MenuWidget
+            <com.hayao0819.liconify.ui.widgets.MenuWidget
                 android:id="@+id/basic_colors"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -29,7 +29,7 @@
                 app:summaryText="@string/activity_desc_basic_colors"
                 app:titleText="@string/activity_title_basic_colors" />
 
-            <com.drdisagree.iconify.ui.widgets.MenuWidget
+            <com.hayao0819.liconify.ui.widgets.MenuWidget
                 android:id="@+id/monet_engine"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -38,57 +38,57 @@
                 app:summaryText="@string/activity_desc_monet_engine"
                 app:titleText="@string/activity_title_monet_engine" />
 
-            <com.drdisagree.iconify.ui.widgets.TitleWidget
+            <com.hayao0819.liconify.ui.widgets.TitleWidget
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:titleText="@string/section_title_stock_colors" />
 
-            <com.drdisagree.iconify.ui.widgets.SwitchWidget
+            <com.hayao0819.liconify.ui.widgets.SwitchWidget
                 android:id="@+id/monet_accent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:summaryText="@string/apply_monet_accent_desc"
                 app:titleText="@string/apply_monet_accent_title" />
 
-            <com.drdisagree.iconify.ui.widgets.SwitchWidget
+            <com.hayao0819.liconify.ui.widgets.SwitchWidget
                 android:id="@+id/monet_gradient"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:summaryText="@string/apply_monet_gradient_desc"
                 app:titleText="@string/apply_monet_gradient_title" />
 
-            <com.drdisagree.iconify.ui.widgets.TitleWidget
+            <com.hayao0819.liconify.ui.widgets.TitleWidget
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:titleText="@string/section_title_dark_theme" />
 
-            <com.drdisagree.iconify.ui.widgets.SwitchWidget
+            <com.hayao0819.liconify.ui.widgets.SwitchWidget
                 android:id="@+id/pitch_black_dark_theme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:summaryText="@string/pitch_black_dark_desc"
                 app:titleText="@string/pitch_black_dark_title" />
 
-            <com.drdisagree.iconify.ui.widgets.SwitchWidget
+            <com.hayao0819.liconify.ui.widgets.SwitchWidget
                 android:id="@+id/pitch_black_amoled_theme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:summaryText="@string/pitch_black_amoled_desc"
                 app:titleText="@string/pitch_black_amoled_title" />
 
-            <com.drdisagree.iconify.ui.widgets.TitleWidget
+            <com.hayao0819.liconify.ui.widgets.TitleWidget
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:titleText="@string/section_title_misc" />
 
-            <com.drdisagree.iconify.ui.widgets.SwitchWidget
+            <com.hayao0819.liconify.ui.widgets.SwitchWidget
                 android:id="@+id/minimal_qspanel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:summaryText="@string/remove_top_shade_of_qspanel"
                 app:titleText="@string/minimal_qspanel" />
 
-            <com.drdisagree.iconify.ui.widgets.SwitchWidget
+            <com.hayao0819.liconify.ui.widgets.SwitchWidget
                 android:id="@+id/system_monet"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

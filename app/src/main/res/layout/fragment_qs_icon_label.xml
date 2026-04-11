@@ -21,20 +21,20 @@
             android:animateLayoutChanges="true"
             android:orientation="vertical">
 
-            <com.drdisagree.iconify.ui.widgets.TitleWidget
+            <com.hayao0819.liconify.ui.widgets.TitleWidget
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:iconSpaceReserved="false"
                 app:titleText="@string/section_title_size_and_position" />
 
-            <com.drdisagree.iconify.ui.widgets.SwitchWidget
+            <com.hayao0819.liconify.ui.widgets.SwitchWidget
                 android:id="@+id/hide_label"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:summaryText="@string/hide_label_desc"
                 app:titleText="@string/hide_label_title" />
 
-            <com.drdisagree.iconify.ui.widgets.SliderWidget
+            <com.hayao0819.liconify.ui.widgets.SliderWidget
                 android:id="@+id/text_size"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -46,7 +46,7 @@
                 app:titleText="@string/text_size_title"
                 app:valueFormat="sp" />
 
-            <com.drdisagree.iconify.ui.widgets.SliderWidget
+            <com.hayao0819.liconify.ui.widgets.SliderWidget
                 android:id="@+id/icon_size"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -58,7 +58,7 @@
                 app:titleText="@string/icon_size_title"
                 app:valueFormat="dp" />
 
-            <com.drdisagree.iconify.ui.widgets.SliderWidget
+            <com.hayao0819.liconify.ui.widgets.SliderWidget
                 android:id="@+id/move_icon"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -70,7 +70,7 @@
                 app:titleText="@string/move_icon_title"
                 app:valueFormat="dp" />
 
-            <com.drdisagree.iconify.ui.widgets.TitleWidget
+            <com.hayao0819.liconify.ui.widgets.TitleWidget
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:iconSpaceReserved="false"
@@ -117,35 +117,35 @@
                 </com.google.android.material.button.MaterialButtonToggleGroup>
             </RelativeLayout>
 
-            <com.drdisagree.iconify.ui.widgets.SwitchWidget
+            <com.hayao0819.liconify.ui.widgets.SwitchWidget
                 android:id="@+id/label_white"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:summaryText="@string/label_always_white_desc"
                 app:titleText="@string/label_always_white_title" />
 
-            <com.drdisagree.iconify.ui.widgets.SwitchWidget
+            <com.hayao0819.liconify.ui.widgets.SwitchWidget
                 android:id="@+id/label_white_v2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:summaryText="@string/label_always_white_v2_desc"
                 app:titleText="@string/label_always_white_v2_title" />
 
-            <com.drdisagree.iconify.ui.widgets.SwitchWidget
+            <com.hayao0819.liconify.ui.widgets.SwitchWidget
                 android:id="@+id/label_system"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:summaryText="@string/label_follow_system_desc"
                 app:titleText="@string/label_follow_system_title" />
 
-            <com.drdisagree.iconify.ui.widgets.SwitchWidget
+            <com.hayao0819.liconify.ui.widgets.SwitchWidget
                 android:id="@+id/label_system_v2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:summaryText="@string/label_follow_system_v2_desc"
                 app:titleText="@string/label_follow_system_v2_title" />
 
-            <com.drdisagree.iconify.ui.widgets.SwitchWidget
+            <com.hayao0819.liconify.ui.widgets.SwitchWidget
                 android:id="@+id/label_fix_text_color"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
