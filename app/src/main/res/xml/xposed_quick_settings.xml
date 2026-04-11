@@ -63,6 +63,7 @@
             android:title="@string/horizontal_qs_tile_title"
             app:iconSpaceReserved="false" />
 
+
     </com.drdisagree.iconify.ui.preferences.PreferenceCategory>
 
     <com.drdisagree.iconify.ui.preferences.PreferenceCategory

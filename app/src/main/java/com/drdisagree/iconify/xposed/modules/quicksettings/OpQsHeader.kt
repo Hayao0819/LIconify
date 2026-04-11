@@ -1425,38 +1425,44 @@ class OpQsHeader(context: Context) : ModPack(context) {
     }
 
     private fun updateInternetTileColors() {
-        // Skip if colors not yet initialized (QSTileViewImpl not constructed yet)
+        // Retry init if colors not yet initialized (QSTileViewImpl not constructed yet)
         if (colorActive == null || colorInactive == null) {
-            initResources()
+            try {
+                initResources()
+            } catch (_: Throwable) {
+            }
         }
 
         if (mInternetEnabled) {
             mOpQsHeaderView?.setInternetTileColor(
-                tileColor = colorActive ?: colorAccent,
+                tileColor = colorActive ?: return,
                 labelColor = colorLabelActive ?: Color.WHITE
             )
         } else {
             mOpQsHeaderView?.setInternetTileColor(
-                tileColor = colorInactive ?: Color.TRANSPARENT,
+                tileColor = colorInactive ?: return,
                 labelColor = colorLabelInactive ?: Color.WHITE
             )
         }
     }
 
     private fun updateBluetoothTileColors() {
-        // Skip if colors not yet initialized (QSTileViewImpl not constructed yet)
+        // Retry init if colors not yet initialized (QSTileViewImpl not constructed yet)
         if (colorActive == null || colorInactive == null) {
-            initResources()
+            try {
+                initResources()
+            } catch (_: Throwable) {
+            }
         }
 
         if (mBluetoothEnabled) {
             mOpQsHeaderView?.setBluetoothTileColor(
-                tileColor = colorActive ?: colorAccent,
+                tileColor = colorActive ?: return,
                 labelColor = colorLabelActive ?: Color.WHITE
             )
         } else {
             mOpQsHeaderView?.setBluetoothTileColor(
-                tileColor = colorInactive ?: Color.TRANSPARENT,
+                tileColor = colorInactive ?: return,
                 labelColor = colorLabelInactive ?: Color.WHITE
             )
         }
