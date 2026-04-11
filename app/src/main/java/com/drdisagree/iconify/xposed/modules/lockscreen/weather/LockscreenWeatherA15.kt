@@ -260,6 +260,7 @@ class LockscreenWeatherA15(context: Context) : ModPack(context) {
                         }
 
                         applyLayoutConstraints(mLsItemsContainer ?: mWeatherContainer)
+                        aodBurnInProtection?.unregister()
                         aodBurnInProtection = AodBurnInProtection.registerForView(
                             mLsItemsContainer ?: mWeatherContainer
                         )
@@ -268,7 +269,10 @@ class LockscreenWeatherA15(context: Context) : ModPack(context) {
                     }, 1000)
                 }
 
-                override fun onViewDetachedFromWindow(v: View) {}
+                override fun onViewDetachedFromWindow(v: View) {
+                    aodBurnInProtection?.unregister()
+                    aodBurnInProtection = null
+                }
             })
         }
 

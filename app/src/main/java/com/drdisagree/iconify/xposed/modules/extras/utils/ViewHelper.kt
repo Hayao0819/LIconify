@@ -466,6 +466,8 @@ object ViewHelper {
         return result
     }
 
+    private val hiddenViews = java.util.Collections.newSetFromMap(java.util.WeakHashMap<View, Boolean>())
+
     fun View?.hideView() {
         if (this == null) return
 
@@ -488,6 +490,8 @@ object ViewHelper {
 
         makeSizeZero()
         makeInvisible()
+
+        if (!hiddenViews.add(this)) return
 
         viewTreeObserver?.addOnGlobalLayoutListener {
             makeSizeZero()

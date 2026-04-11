@@ -32,6 +32,11 @@ class AodBurnInProtection(private val view: View) {
         }
     }
 
+    fun unregister() {
+        stopMovement()
+        activeMovements.remove(view)
+    }
+
     private fun startMovement() {
         if (movementJob?.isActive == true) return
 
@@ -48,6 +53,7 @@ class AodBurnInProtection(private val view: View) {
 
     private fun stopMovement() {
         movementJob?.cancel()
+        movementJob = null
         resetViewPosition()
     }
 

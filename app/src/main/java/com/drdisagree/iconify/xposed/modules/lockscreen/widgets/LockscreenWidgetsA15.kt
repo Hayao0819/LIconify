@@ -332,6 +332,7 @@ class LockscreenWidgetsA15(context: Context) : ModPack(context) {
                         }
 
                         applyLayoutConstraints(mLsItemsContainer ?: mWidgetsContainer)
+                        aodBurnInProtection?.unregister()
                         aodBurnInProtection = AodBurnInProtection.registerForView(
                             mLsItemsContainer ?: mWidgetsContainer
                         )
@@ -340,7 +341,10 @@ class LockscreenWidgetsA15(context: Context) : ModPack(context) {
                     }, 1000)
                 }
 
-                override fun onViewDetachedFromWindow(v: View) {}
+                override fun onViewDetachedFromWindow(v: View) {
+                    aodBurnInProtection?.unregister()
+                    aodBurnInProtection = null
+                }
             })
         }
 

@@ -88,23 +88,15 @@ class Lockscreen(context: Context) : ModPack(context) {
                 .resource("layout", "status_bar_expanded")
                 .suppressError()
                 .run { liparam ->
+                    if (!hideLockscreenLockIcon) return@run
+
                     liparam.view.findViewById<View>(
                         liparam.res.getIdentifier(
                             "lock_icon_view",
                             "id",
                             mContext.packageName
                         )
-                    ).apply {
-                        if (!hideLockscreenLockIcon) return@apply
-
-                        layoutParams.height = 0
-                        layoutParams.width = 0
-                        visibility = View.GONE
-                        viewTreeObserver.addOnDrawListener {
-                            visibility = View.GONE
-                        }
-                        requestLayout()
-                    }
+                    ).hideView()
                 }
         } else {
             val aodBurnInLayerClass =
@@ -116,6 +108,8 @@ class Lockscreen(context: Context) : ModPack(context) {
             val keyguardStatusViewClass = findClass("com.android.keyguard.KeyguardStatusView")
             var keyguardStatusViewHooked = false
 
+            var lockIconInitialized = false
+
             fun hideLockIcon(param: XC_MethodHook.MethodHookParam) {
                 val entryV = param.thisObject as View
 
@@ -124,8 +118,11 @@ class Lockscreen(context: Context) : ModPack(context) {
 
                 entryV.addOnAttachStateChangeListener(object : OnAttachStateChangeListener {
                     override fun onViewAttachedToWindow(v: View) {
+                        if (lockIconInitialized) return
+
                         Handler(Looper.getMainLooper()).postDelayed({
                             if (!hideLockscreenLockIcon) return@postDelayed
+                            if (lockIconInitialized) return@postDelayed
 
                             val rootView = v.parent as? ViewGroup ?: return@postDelayed
 
@@ -145,6 +142,8 @@ class Lockscreen(context: Context) : ModPack(context) {
                                 return@postDelayed
                             }
 
+                            lockIconInitialized = true
+
                             listOf(
                                 "device_entry_icon_bg",
                                 "device_entry_icon_fg"
@@ -162,6 +161,8 @@ class Lockscreen(context: Context) : ModPack(context) {
                             }.forEach { view ->
                                 view.hideView()
                             }
+
+                            entryV.removeOnAttachStateChangeListener(this)
                         }, 1000)
                     }
 

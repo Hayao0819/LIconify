@@ -279,6 +279,7 @@ class LockscreenClockA15(context: Context) : ModPack(context) {
                         mLockscreenRootView = rootView
 
                         mLsItemsContainer = rootView.getLsItemsContainer()
+                        aodBurnInProtection?.unregister()
                         aodBurnInProtection =
                             AodBurnInProtection.registerForView(mLsItemsContainer!!)
                         aodBurnInProtection!!.setMovementEnabled(true)
@@ -312,6 +313,8 @@ class LockscreenClockA15(context: Context) : ModPack(context) {
 
                 override fun onViewDetachedFromWindow(v: View) {
                     unregisterClockUpdater()
+                    aodBurnInProtection?.unregister()
+                    aodBurnInProtection = null
                 }
             })
         }
