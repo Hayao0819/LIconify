@@ -140,6 +140,7 @@ import com.hayao0819.liconify.data.common.Preferences.SELECTED_QS_TEXT_COLOR
 import com.hayao0819.liconify.data.common.Preferences.SHOW_HOME_CARD
 import com.hayao0819.liconify.data.common.Preferences.UNZOOM_DEPTH_WALLPAPER
 import com.hayao0819.liconify.data.common.Preferences.UPDATE_OVER_WIFI
+import com.hayao0819.liconify.data.common.Preferences.HORIZONTAL_QSTILE_SWITCH
 import com.hayao0819.liconify.data.common.Preferences.VERTICAL_QSTILE_SWITCH
 import com.hayao0819.liconify.data.common.Preferences.WEATHER_CUSTOM_LOCATION
 import com.hayao0819.liconify.data.common.Preferences.WEATHER_CUSTOM_LOCATION_PICKER
@@ -458,6 +459,9 @@ object PrefsHelper {
             LSCLOCK_FONT_TEXT_SCALING,
             LSCLOCK_USERNAME,
             LSCLOCK_DEVICENAME -> getBoolean(LSCLOCK_SWITCH)
+
+            VERTICAL_QSTILE_SWITCH -> !getBoolean(HORIZONTAL_QSTILE_SWITCH)
+            HORIZONTAL_QSTILE_SWITCH -> !getBoolean(VERTICAL_QSTILE_SWITCH)
 
             else -> true
         }
