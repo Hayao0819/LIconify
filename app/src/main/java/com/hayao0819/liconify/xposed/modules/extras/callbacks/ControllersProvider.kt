@@ -549,7 +549,6 @@ class ControllersProvider(context: Context) : ModPack(context) {
                     "showDialog",
                     expandableClass!!
                 ) -> {
-                    // it's invoking wrong callMethod() so we have to call it manually
                     return try {
                         instance.mBluetoothTileDialogViewModel!!::class.java.getMethod(
                             "showDialog",

@@ -244,7 +244,7 @@ class HookEntry : ServiceConnection {
                 _instance = value?.let { WeakReference(it) }
             }
 
-        val runningMods = ArrayList<ModPack>()
+        val runningMods = java.util.concurrent.CopyOnWriteArrayList<ModPack>()
         var isChildProcess = false
 
         private var rootProxyIPC: IRootProviderProxy? = null
