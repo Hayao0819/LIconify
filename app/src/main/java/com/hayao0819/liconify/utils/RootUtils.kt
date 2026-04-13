@@ -16,9 +16,14 @@ object RootUtils {
     val isApatchInstalled: Boolean
         get() = Shell.cmd("apd --help").exec().isSuccess
 
+    val hasMetamodule: Boolean
+        get() = isKSUInstalled &&
+                Shell.cmd("ls /data/adb/modules/*/metamount.sh").exec().isSuccess
+
     val isSusfsBinaryAvailable: Boolean
         get() = !isMagiskInstalled &&
                 isKSUInstalled &&
+                !hasMetamodule &&
                 fileExists("/data/adb/ksu/bin/ksu_susfs")
 
     fun moduleExists(moduleId: String): Boolean {
