@@ -274,8 +274,10 @@ class DepthWallpaperA14(context: Context) : ModPack(context) {
         canvasEngineClass
             .hookMethod("onSurfaceDestroyed")
             .runAfter { param ->
+                if (!showDepthWallpaper) return@runAfter
+
                 // lockscreen wallpaper changed
-                if (showDepthWallpaper && !showCustomImages && isLockScreenWallpaper(param.thisObject)) {
+                if (!showCustomImages && isLockScreenWallpaper(param.thisObject)) {
                     invalidateCache()
                 }
             }
@@ -283,6 +285,8 @@ class DepthWallpaperA14(context: Context) : ModPack(context) {
         canvasEngineClass
             .hookMethod("onCreate")
             .runAfter { param ->
+                if (!showDepthWallpaper) return@runAfter
+
                 if (param.thisObject
                         .getField("mWallpaperManager")
                         .callMethod(
@@ -297,9 +301,11 @@ class DepthWallpaperA14(context: Context) : ModPack(context) {
         canvasEngineClass
             .hookMethod("drawFrameOnCanvas")
             .runAfter { param ->
+                if (!showDepthWallpaper) return@runAfter
+
                 wallpaperProcessorThread?.interrupt()
 
-                if (showDepthWallpaper && !showCustomImages && isLockScreenWallpaper(param.thisObject)) {
+                if (!showCustomImages && isLockScreenWallpaper(param.thisObject)) {
                     wallpaperProcessorThread = Thread {
                         val wallpaperBitmap = Bitmap.createBitmap((param.args[0] as Bitmap))
                         val cacheIsValid: Boolean = assertCache(wallpaperBitmap)
